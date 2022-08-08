@@ -1,15 +1,15 @@
-package org.example;
+package org.hangmanGame;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class HangmanWord {
-    private String hangmanWord;
+    public static String hangmanWord;
 
     static Random random = new Random();
 
-    public static String getRandomWord(){
-        return words.get(random.nextInt(words.size()));
+    public static void getRandomWord(){
+        hangmanWord = words.get(random.nextInt(words.size()));
     }
 
     private static ArrayList<String> words = new ArrayList<>();
