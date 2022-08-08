@@ -6,6 +6,8 @@ public class HangmanGame {
         HangmanWord.getRandomWord();
         System.out.println(HangmanWord.hangmanWord);
 
+        HangmanResultsDisplay.displayHiddenWord();
+
         HangmanPlayerInput.getPlayerInput();
     }
 }

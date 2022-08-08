@@ -4,13 +4,11 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class HangmanWord {
-    public static String hangmanWord;
+    public static String hangmanWord = "";
 
     static Random random = new Random();
 
-    public static void getRandomWord(){
-        hangmanWord = words.get(random.nextInt(words.size()));
-    }
+
 
     private static ArrayList<String> words = new ArrayList<>();
 
@@ -22,5 +20,9 @@ public class HangmanWord {
         words.add("Elephant");
         words.add("Fireman");
 
+    }
+
+    public static void getRandomWord(){
+        hangmanWord = words.get(random.nextInt(words.size()));
     }
 }
