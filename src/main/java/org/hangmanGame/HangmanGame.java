@@ -9,5 +9,7 @@ public class HangmanGame {
         HangmanResultsDisplay.displayHiddenWord();
 
         HangmanPlayerInput.getPlayerInput();
+
+        HangmanResultsDisplay.displayHiddenWord();
     }
 }
