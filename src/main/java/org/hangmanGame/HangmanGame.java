@@ -11,5 +11,9 @@ public class HangmanGame {
         HangmanPlayerInput.getPlayerInput();
 
         HangmanResultsDisplay.displayHiddenWord();
+
+        HangmanPlayerInput.getPlayerInput();
+
+        HangmanResultsDisplay.displayHiddenWord();
     }
 }

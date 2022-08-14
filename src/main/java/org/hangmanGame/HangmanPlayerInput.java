@@ -1,17 +1,18 @@
 package org.hangmanGame;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HangmanPlayerInput {
 
-    public static String playerInputLetter;
+    public static ArrayList<String> playerInputLetter = new ArrayList<String>();
 
     public static void getPlayerInput(){
         System.out.println("Guess a letter");
 
         Scanner playerInputScanner = new Scanner(System.in);
 
-        playerInputLetter = playerInputScanner.nextLine();
+        playerInputLetter.add(playerInputScanner.nextLine());
 
         System.out.println(playerInputLetter);
     }
