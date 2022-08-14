@@ -12,7 +12,7 @@ public class HangmanPlayerInput {
 
         Scanner playerInputScanner = new Scanner(System.in);
 
-        playerInputLetter.add(playerInputScanner.nextLine());
+        playerInputLetter.add(playerInputScanner.nextLine().toLowerCase());
 
         System.out.println(playerInputLetter);
     }

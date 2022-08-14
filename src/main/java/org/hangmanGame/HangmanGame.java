@@ -8,12 +8,12 @@ public class HangmanGame {
 
         HangmanResultsDisplay.displayHiddenWord();
 
-        HangmanPlayerInput.getPlayerInput();
+        int wrongGuesses = 0;
 
-        HangmanResultsDisplay.displayHiddenWord();
+        for (int gameRound = 0; wrongGuesses <= 3; gameRound++) {
+            HangmanPlayerInput.getPlayerInput();
 
-        HangmanPlayerInput.getPlayerInput();
-
-        HangmanResultsDisplay.displayHiddenWord();
+            HangmanResultsDisplay.displayHiddenWord();
+        }
     }
 }

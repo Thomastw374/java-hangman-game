@@ -6,7 +6,8 @@ import java.util.List;
 public class HangmanResultsDisplay {
 
     public static String hiddenWord = "";
-//
+
+    //
 //    public HangmanResultsDisplay(String playerInputLetter) {
 //        this.playerInputLetter = playerInputLetter;
 //
@@ -21,19 +22,23 @@ public class HangmanResultsDisplay {
 
     public static void displayHiddenWord() {
         String[] hangmanWordArray = HangmanWord.hangmanWord.split("");
-        hiddenWord = "" ;
+        hiddenWord = "";
+
 
         for (int wordLength = 0; wordLength < HangmanWord.hangmanWord.length(); wordLength++) {
-            for (int guessNumber = 0; guessNumber < HangmanPlayerInput.playerInputLetter.size(); guessNumber++){
+
+            Boolean isAValidGuess = false;
+
+            for (int guessNumber = 0; guessNumber < HangmanPlayerInput.playerInputLetter.size(); guessNumber++) {
                 if (hangmanWordArray[wordLength].toLowerCase().equals(HangmanPlayerInput.playerInputLetter.get(guessNumber))) {
                     hiddenWord += hangmanWordArray[wordLength];
-//                    set boolean to true
+                    isAValidGuess = true;
                 }
             }
-//            if boolean is true don't add underscore. Else add underscore.
-//            Return boolean to false.
-//            Can do something like an indexOf to see if the word even contains the letter, if not increment wrong guess count
-//            end for loop in game class when guess count reaches 3. Add in hangman text art.
+
+            if (isAValidGuess == false) {
+                hiddenWord += "_";
+            }
 
             hiddenWord += " ";
 
